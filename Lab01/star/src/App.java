@@ -1,4 +1,4 @@
-package star.src;
+package Lab01.star.src;
 
 import java.util.Scanner;
 

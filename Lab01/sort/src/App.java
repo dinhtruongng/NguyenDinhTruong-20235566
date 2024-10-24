@@ -1,3 +1,5 @@
+package Lab01.sort.src;
+
 import java.util.Scanner;
 import java.util.Arrays;
 public class App {

@@ -1,3 +1,5 @@
+package Lab01.add_matrices.src;
+
 import java.util.Scanner;
 
 public class add_matrices {

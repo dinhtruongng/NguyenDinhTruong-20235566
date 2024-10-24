@@ -1,3 +1,5 @@
+package Lab01.JavaBasics.src;
+
 import java.util.Scanner;
 
 public class InputFromKeyboard {
