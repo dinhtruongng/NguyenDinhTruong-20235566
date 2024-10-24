@@ -15,7 +15,8 @@ public class Main {
         acc.Withdraw(500000, today.plusDays(2));
         acc.Withdraw(500000, today.plusDays(3));
         acc.Withdraw(500000, today.plusDays(4));
-
+        acc.PrintHistory();
         System.out.println("Số dư hiện tại: " + String.valueOf(acc.balance));
+        System.out.println("Số dư sau khi cộng lãi: " + String.valueOf(acc.InterestBalance()) + " VND");
     }
 }

@@ -50,14 +50,18 @@ public class BankAccount {
 
 
     public void PrintHistory() {
+        System.out.println("Lịch sử giao dịch: ");
         for (int i=0; i<history.size(); i++) {
-            System.out.println(history.get(i));
+            int index = i+1;
+            String id = String.valueOf(index);
+            System.out.println(id + ". " + history.get(i));
         }
     }
 
-    public void InterestBalance() {
+    public double InterestBalance() {
         double month_int = balance * monthlyInterest;
         balance = balance + month_int;
+        return balance;
     }
 
 }
