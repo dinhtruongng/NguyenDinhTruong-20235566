@@ -23,18 +23,23 @@ public class BankAccount {
         history.add(add[0] + " - " + add[1] + " - " + add[2]);
         System.out.println("Đã gửi " + str_amount + " VND");
     }
-    public void Withdraw(double amount, LocalDate date) {
+    public boolean Withdraw(double amount, LocalDate date) {
         if (amount>balance) {
             System.out.println("Insufficient Balance");
+            return false;
         }
-        if (n_withdr_monthly(date)>3) {
+
+        if (n_withdr_monthly(date)>=3) {
             System.out.println("Limit reached");
+            return false;
         }
+
         balance = balance - amount;
         withdr_dates.add(date);
         String[] add = {"Withdraw", String.valueOf(amount), date.format(formatter)};
         history.add(add[0] + " - " + add[1] + " - " + add[2]);
         System.out.println("Đã rút " + String.valueOf(amount) + " VND");
+        return true;
     }
     public int n_withdr_monthly(LocalDate date) {
         int count = 0;
